@@ -1,0 +1,101 @@
+@font-face{
+  font-family: 'Lato';
+  src: url('fonts/Lato-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'Myriad Pro';
+  src: url('fonts/MyriadPro-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  max-width: 1602px;
+  align-content: center;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Lato;
+  font-size: 16px;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.wrapper {
+  width: 1602px;
+  height: 961px;
+  background: url("img/Header_BG.png") no-repeat center top;
+  color: #ffffff;
+}
+
+.logo {
+  width: 133px;
+  height: 29px;
+  margin-top: -7px;
+  /* margin: 32px 0 0 205px; */
+}
+
+.menu {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  width: 1197px;
+  height: 51px;
+  margin: 39px 203px 0 202px;
+  border-bottom: solid 1px #000000;
+}
+
+.navigation {
+  width: 631px;
+  height: inherit;
+  font-weight: 500;
+  /* margin: 39px 203px 0 768px; */
+  /* padding-bottom: ; */
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  height: inherit;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+}
+
+.navigation li {
+  height: inherit;
+  cursor: pointer;
+}
+
+.navigation li:hover {
+  border-bottom: solid 1px #ffffff;
+}
+
+h1 {
+  width: 222px;
+  height: 51px;
+  margin: 346px 689px 0 691px;
+  font-family: 'Myriad Pro';
+  font-size: 72px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h2 {
+  width: 443px;
+  height: 78px;
+  margin: 33px 581px 0 578px;
+  text-align: center;
+  font-family: Georgia;
+  font-weight: normal;
+  font-size: 32px;
+  font-style: italic;
+}
