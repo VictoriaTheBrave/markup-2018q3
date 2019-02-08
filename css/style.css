@@ -1,57 +1,82 @@
 @font-face{
   font-family: "Lato";
-  src: url("../fonts/Lato-Regular.woff");
   font-weight: normal;
   font-style: normal;
+  src: local('Lato Regular'),
+    url("../fonts/Lato-Regular.woff") format('woff'),
+    url("../fonts/Lato-Regular.ttf") format('ttf');
+  unicode-range: U+000-5FF;
 }
 
 @font-face{
   font-family: "Lato-Bold";
-  src: url("../fonts/Lato-Bold.woff");
   font-weight: bold;
   font-style: normal;
+  src: local('Lato Bold'),
+    url("../fonts/Lato-Bold.woff") format('woff'),
+    url("../fonts/Lato-Bold.ttf") format('ttf');
+  unicode-range: U+000-5FF;
 }
 
 @font-face{
   font-family: "Lato-Heavy";
-  src: url("../fonts/Lato-Heavy.woff");
   font-weight: bold;
   font-style: normal;
+  src: local('Lato Heavy'),
+    url("../fonts/Lato-Heavy.woff") format('woff'),
+    url("../fonts/Lato-Heavy.ttf") format('ttf');
+  unicode-range: U+000-5FF;
 }
 
 @font-face{
   font-family: "Lato-Semibold";
-  src: url("../fonts/Lato-Semibold.woff");
   font-weight: 600;
   font-style: normal;
+  src: local('Lato Semibold')
+    url("../fonts/Lato-Semibold.woff") format('woff'),
+    url("../fonts/Lato-Semibold.ttf") format('ttf');
+  unicode-range: U+000-5FF;
 }
 
 @font-face{
   font-family: "Lato-Black";
-  src: url("../fonts/Lato-Black.woff");
   font-weight: 900;
   font-style: normal;
+  src: local('Lato Black'),
+    url("../fonts/Lato-Black.woff") format('woff'),
+    url("../fonts/Lato-Black.ttf") format('ttf');
+  unicode-range: U+000-5FF;
 }
 
 @font-face{
   font-family: "Lato-Thin";
-  src: url("../fonts/Lato-Thin.woff");
   font-weight: 400;
   font-style: normal;
+  src: local('Lato Thin'),
+    url("../fonts/Lato-Thin.woff") format('woff'),
+    url("../fonts/Lato-Thin.ttf") format('ttf');
+  unicode-range: U+000-5FF;
 }
 
 @font-face{
   font-family: "Lato-Light";
-  src: url("../fonts/Lato-Light.woff");
   font-weight: 300;
   font-style: normal;
+  src: local('Lato Light'),
+    url("../fonts/Lato-Light.woff") format('woff'),
+    url("../fonts/Lato-Light.ttf") format('ttf');
+  unicode-range: U+000-5FF;
 }
 
 @font-face{
   font-family: "Myriad Pro-Bold";
-  src: url("../fonts/MyriadPro-Bold.woff");
   font-weight: bold;
   font-style: normal;
+  src: local('Myriad Pro-Bold'),
+    url("../fonts/MyriadPro-Bold.woff") format('woff'),
+    url("../fonts/MyriadPro-Bold.ttf") format('ttf'),
+    url("../fonts/MyriadPro-Bold.otf") format('otf');
+  unicode-range: U+000-5FF;
 }
 
 * {
@@ -252,7 +277,7 @@ input:focus:-moz-placeholder {
 .domain-prices {
   width: 888px;
   height: 194px;
-  mar                                          gin-top: 40px;
+  margin-top: 40px;
   table-layout: fixed;
   border-collapse: collapse;
 }
@@ -286,7 +311,7 @@ input:focus:-moz-placeholder {
 .second-row-prices td + td::after {
   content: "";
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: -9.5px;
   width: 16px;
   height: 16px;
@@ -296,10 +321,10 @@ input:focus:-moz-placeholder {
 .first-row-prices td:first-child::before {
   content: "";
   position: absolute;
-  bottom: -13px;
+  bottom: -14px;
   left: 0px;
-  width: 26px;
-  height: 26px;
+  width: 25px;
+  height: 25px;
   background: #ffffff;
 }
 
@@ -307,9 +332,9 @@ input:focus:-moz-placeholder {
   content: "";
   position: absolute;
   bottom: -16px;
-  left: 190px;
-  width: 31px;
-  height: 31px;
+  right: 0;
+  width: 25px;
+  height: 25px;
   background: #ffffff;
 }
 
@@ -375,51 +400,70 @@ input:focus:-moz-placeholder {
 }
 
 .packages i {
-  width: 55px;
-  height: 55px;
+  position: relative;
+  top: -17px;
+  left: -6px;
+  z-index: 2;
+  width: 46px;
+  height: 46px;
   box-sizing: border-box;
-  margin: 37px 0 15px 0;
+  margin-bottom: 5px;
   border-radius: 50%;
-  padding: 13px;
+  padding: 15px;
   font-size: 1.0625rem;
+  background: #ffffff;
 }
 
-.packages i div {
-  width: 57px;
-  height: 57px;
+.one-quarter, .two-quarters, .three-quarters {
+  position: relative;
+  top: 34px;
+  left: 8px;
+  box-sizing: border-box;
 }
 
 .one-quarter {
-  margin: -36px 0 15px -19px;
-  background-image: linear-gradient(180deg, transparent 50%, white 50%), linear-gradient(90deg, white 50%, transparent 50%);
+  width: 28px; 
+  height: 28px;
+  margin: 0 0px 28px 114px;
+  border-radius: 0 28px 0 0;
+  background: #f9d423;
 }
 
 .two-quarters {
-  margin: -36px 0 15px -19px;
-  background-image: linear-gradient(270deg, transparent 50%, white 50%), linear-gradient(90deg, white 50%, transparent 50%);
+  width: 28px;
+  height: 56px;
+  border-radius: 0 56px 56px 0;
+  background: #7f8c8d;
 }
 
 .three-quarters {
-  margin: -36px 0 15px -48px;
-  background-image: linear-gradient(180deg, white 50%, transparent 50%);
+  width: 56px;
+  height: 56px;
+  left: -6px;
+  border-radius: 50%;
+  border-top: 5px solid #f85f40;
+  border-right: 5px solid #f85f40;
+  border-bottom: 5px solid #f85f40;
+  border-left: 5px solid #ffffff;
+  transform: rotate(45deg);
 }
 
 .basic-package i {
-  border: 5px solid #f9d423;
   color: #f9d423;
 }
 
 .normal-package i {
-  border: 5px solid #7f8c8d;
   color: #7f8c8d;
 }
 
 .big-package i {
-  border: 5px solid #f85f40;
   color: #f85f40;
 }
 
 .biggest-package i {
+  width: 56px;
+  height: 56px;
+  margin: 50px 0 0 0;
   border: 5px solid #29c0a3;
   color: #29c0a3;
 }
